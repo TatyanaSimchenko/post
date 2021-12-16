@@ -1,10 +1,14 @@
-import "./App.css";
+import { store } from "./redux/store";
+import { Provider } from "react-redux";
+import Post from "./components/Post";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello</h1>
-    </div>
+    <Provider store={store}>
+      <div>
+        <Post />
+      </div>
+    </Provider>
   );
 }
 
